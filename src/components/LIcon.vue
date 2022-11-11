@@ -107,13 +107,17 @@ export default {
 
       propsBinder(methods, {}, props);
 
-      const observer = new MutationObserver(scheduleHtmlSwap);
-      observer.observe(root.value, {
-        attributes: true,
-        childList: true,
-        characterData: true,
-        subtree: true,
-      });
+      console.log(typeof root.value);
+      if(typeof root.value == 'Node'){
+        const observer = new MutationObserver(scheduleHtmlSwap);
+        observer.observe(root.value, {
+          attributes: true,
+          childList: true,
+          characterData: true,
+          subtree: true,
+        });
+      }
+      
       scheduleCreateIcon();
     });
 
