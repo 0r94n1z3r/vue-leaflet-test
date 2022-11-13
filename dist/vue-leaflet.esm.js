@@ -1446,9 +1446,9 @@ var script$b = {
           characterData: true,
           subtree: true,
         });
+
+        scheduleCreateIcon();
       }
-      
-      scheduleCreateIcon();
     });
 
     return { root };
