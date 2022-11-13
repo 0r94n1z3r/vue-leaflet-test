@@ -1460,8 +1460,7 @@ var script$b = {
 
       propsBinder(methods, {}, props);
 
-      console.log(root.value);
-      //if(typeof root.value == 'Node'){
+      if(root.value){
         const observer = new MutationObserver(scheduleHtmlSwap);
         observer.observe(root.value, {
           attributes: true,
@@ -1469,7 +1468,7 @@ var script$b = {
           characterData: true,
           subtree: true,
         });
-      //}
+      }
       
       scheduleCreateIcon();
     });
