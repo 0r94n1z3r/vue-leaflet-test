@@ -1442,8 +1442,8 @@
 
         propsBinder(methods, {}, props);
 
-        console.log(typeof root.value);
-        if(typeof root.value == 'Node'){
+        console.log(root.value);
+        //if(typeof root.value == 'Node'){
           const observer = new MutationObserver(scheduleHtmlSwap);
           observer.observe(root.value, {
             attributes: true,
@@ -1451,7 +1451,7 @@
             characterData: true,
             subtree: true,
           });
-        }
+        //}
         
         scheduleCreateIcon();
       });
